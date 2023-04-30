@@ -1,7 +1,24 @@
 schema "app" {
 
 }
-
+table "example_table" {
+  schema = schema.app
+  column "id" {
+    null = false
+    type = int
+  }
+  column "title" {
+    null = true
+    type = varchar(100)
+  }
+  column "body" {
+    null = true
+    type = text
+  }
+  primary_key {
+    columns = [column.id]
+  }
+}
 table "users" {
   schema = schema.app
   column "id" {
