@@ -15,6 +15,9 @@ table "users" {
     type   = varchar(255)
     unique = true
   }
+  column "name" {
+    type = varchar(255)
+  }
   primary_key {
     columns = [column.id]
   }
