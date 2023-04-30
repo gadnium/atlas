@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ariga/atlas-sync-action@main
-          with:
-            dir: migrations
-            driver: mysql # or: postgres | sqlite
-            cloud-token: ${{ secrets.ATLAS_CLOUD_TOKEN }}
+      - uses: ariga/atlas-sync-action@0
+        with:
+          dir: migrations
+          driver: mysql # or: postgres | sqlite
+          cloud-token: ${{ secrets.ATLAS_CLOUD_TOKEN }}
