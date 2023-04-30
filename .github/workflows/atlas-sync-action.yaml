@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: ariga/atlas-sync-action
+      - uses: ariga/atlas-sync-action@v0.1.3
         with:
           dir: migrations
           driver: mysql # or: postgres | sqlite
