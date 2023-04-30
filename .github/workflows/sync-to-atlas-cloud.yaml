@@ -1,0 +1,15 @@
+name: Sync Atlas Migrations
+on:
+  push:
+    branches:
+      - master # Only run on our main branch
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ariga/atlas-sync-action@v0
+          with:
+            dir: path/to/migrations
+            driver: mysql # or: postgres | sqlite
+            cloud-token: ${{ secrets.ATLAS_CLOUD_TOKEN }}
